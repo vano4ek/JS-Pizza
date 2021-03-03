@@ -1,0 +1,107 @@
+@logoSize: 100px;
+.container-fluid {
+  margin-bottom: 20px;
+}
+
+.navbar-default {
+  border: none;
+  background: rgba(0, 0, 0, 0.8);
+  height: 70px;
+
+  .upper-nav {
+    border-bottom: 0.2px solid grey;
+    height: 35px;
+    line-height: 50px;
+
+    .delivery, .open-hours, .phone-num {
+      margin-right: 5px;
+    }
+    .delivery, .phone-num{
+      font-weight: 600;
+    }
+
+    @media (max-width: 1092px) {
+      .delivery {
+        display: none;
+      }
+    }
+    @media (max-width: 768px) {
+      .open-hours {
+        display: none;
+      }
+
+      .phone-num {
+        font-size: 12px;
+      }
+    }
+  }
+
+  .lower-nav {
+    height: 35px;
+    color: white;
+
+  }
+
+  .navbar-text {
+    font-size: 13px;
+  }
+
+  @media (max-width: 597px) {
+    .navbar-text {
+      display: none;
+    }
+  }
+
+  .nav-pizza {
+    color: white;
+  }
+
+  @media (max-width: 767px) {
+    .nav-pizza {
+      display: none;
+    }
+  }
+
+  .navbar-btn {
+    float: right;
+    margin: 3px 0 0;
+    color: white;
+    background: #eaa72e;
+    border: none;
+    padding: 4px 9px;
+
+  }
+
+  @media (max-width: 597px) {
+    .navbar-btn {
+      position: relative;
+      top: -14px;
+    }
+  }
+
+}
+
+.navbar-brand {
+  div {
+    width: @logoSize;
+    background-color: #ea862e;
+    padding: 50px 1px;
+    text-align: center;
+    transform: translateY(-40%);
+    color: white;
+    position: relative;
+
+    span {
+      position: absolute;
+      left: @logoSize/4;
+      right: @logoSize/4;
+      bottom: 10px;
+    }
+
+  }
+
+  img {
+    transform: rotateX(180deg) translateY(42px);
+  }
+
+}

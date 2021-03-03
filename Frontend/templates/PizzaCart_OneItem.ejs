@@ -1,9 +1,28 @@
-<div>
-    <%= pizza.title %> (<%= size %>)
-    <div>Ціна: <%= pizza[size].price %> грн.</div>
-    <div>
-        <button class="btn btn-danger minus">-</button>
-        <span class="label label-default"><%= quantity %></span>
-        <button class="btn btn-success plus">+</button>
+<div class="order">
+    <h4><%=pizza.title%> (<%=size%>)</h4>
+    <img src="assets/images/size-icon.svg">
+    <span class="cart-num"><%=pizza[size].size%></span>
+    <img src="assets/images/weight.svg">
+    <span class="cart-num"><%=pizza[size].weight%></span>
+    <div class="row">
+        <span class="col-xs-3 cart-num price"><%=pizza[size].price%>грн</span>
+        <div class="col-xs-4">
+            <button type="button" class="btn btn-danger btn-xs btn-round count-btn minus">
+                <span class="glyphicon glyphicon-minus"></span>
+            </button>
+            <span class="order-amount cart-num"><%=quantity%></span>
+            <button type="button" class="btn btn-success btn-xs btn-round count-btn plus">
+                <span class="glyphicon glyphicon-plus"></span>
+            </button>
+        </div>
+        <div class="col-xs-1">
+            <button type="button" class="btn btn-default btn-xs btn-round del">
+                <span class="glyphicon glyphicon-remove" style="color: #eaa72e"></span>
+            </button>
+        </div>
+        <div class="col-xs-4 pizza-img">
+            <img src="<%=pizza.icon%>">
+        </div>
     </div>
+
 </div>

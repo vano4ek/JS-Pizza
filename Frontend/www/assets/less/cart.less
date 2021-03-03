@@ -1,0 +1,132 @@
+@defaultSize: 100px;
+
+.cart-first-div {
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 70px;
+  line-height: 70px;
+
+  .cart-header {
+    padding: 5px;
+    font-weight: 700;
+    font-family: sans-serif;
+    font-size: 18px;
+    width: 50%;
+  }
+
+}
+
+
+.reset-order {
+  cursor: pointer;
+  float: right;
+  font-size: 50%;
+
+}
+#cart {
+  height: 75%;
+  position: fixed;
+  right: 0;
+  top: 70px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+
+    .order {
+      position: relative;
+      height: @defaultSize;
+      width: 100%;
+
+      .btn-round {
+        border-radius: 50%;
+      }
+
+      @media (max-width: 991px) {
+        .btn-round {
+          height: 15px;
+          width: 15px;
+          padding: 0;
+        }
+        .glyphicon{
+          font-size: 10px;
+          vertical-align: top;
+        }
+        .cart-num{
+          font-size: 12px;
+        }
+
+      }
+
+      .pizza-img {
+        position: absolute;
+        right: -50px;
+        top: 0;
+        height: @defaultSize;
+        width: @defaultSize;
+
+        img {
+          width: @defaultSize;
+        }
+      }
+
+      @media (max-width: 991px) {
+
+        .pizza-img {
+          right: -37.5px;
+          height: 75px;
+          width: 75px;
+
+          img {
+            width: 75px;
+          }
+        }
+      }
+    }
+
+
+
+}
+.cart-amount {
+  display: inline-block;
+  background-color: @mainColor;
+  width: 15px;
+  border-radius: 50%;
+  height: 15px;
+  font-size: 10px;
+  font-weight: 600;
+  margin-left: 2px;
+  line-height: 15px;
+  padding: 0;
+}
+.footer {
+  height: 100px;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  z-index: 3;
+  background-color: white;
+
+  .order-price-text {
+    float: left;
+    width: 50%;
+    font-weight: 600;
+  }
+
+  .order-price {
+    text-align: right;
+    float: right;
+    width: 50%;
+    font-weight: 600;
+  }
+
+  .order-btn {
+    position: relative;
+    bottom: -20px;
+    background-color: #eaa72e;
+    color: white;
+    width: 70%;
+    margin: auto;
+  }
+
+
+}

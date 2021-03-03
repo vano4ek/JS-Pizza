@@ -1,3 +1,19 @@
+.pizza_list{
+  margin-top: 40px;
+  display: flex;
+  overflow: auto;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+
+}
+@media(min-width: 1000px){
+  .pizza_list{
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
 .pizza-card {
   img {
     max-width: 250px;
@@ -6,5 +22,27 @@
   h3 {
     color: @mainColor;
     background-color: lighten(@mainColor, 45%);
+    font-weight: 600;
+
+  }
+  .pizza-type{
+    color: grey;
+    font-size: small;
+  }
+  .btn-buy{
+    background: #eaa72e;
+    color: white;
+    display: block;
+    width: 101px;
+    margin: auto;
+  }
+  .size-weight{
+    text-align: center;
+    height: 116px;
+  }
+  .price{
+    font-size: 30px;
+    font-weight: 600;
   }
 }
+
