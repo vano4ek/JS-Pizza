@@ -1,0 +1,77 @@
+<% include common/header.ejs %>
+
+<div class="main container-fluid">
+    <div class="left">
+        <div class="row">
+        <div class="col-xs-12 contact-data">1. Контактні дані</div>
+            <div class="col-md-7">
+                <div class="form-horizontal">
+                    <div class="form-group name row">
+                        <label class="col-sm-2 control-label">Ім'я</label>
+                        <div class="col-sm-10">
+                            <input class="form-control" type="text" id="inputName" placeholder="Ім'я Фамілія">
+                            <span class="name-help-block"></span>
+                        </div>
+                    </div>
+                    <div class="form-group phone row">
+                        <label class="col-sm-2 control-label">Телефон</label>
+                        <div class="col-sm-10">
+                            <input class="form-control" type="text" id="inputPhone" placeholder="+380994010999">
+                            <span class="phone-help-block"></span>
+                        </div>
+                    </div>
+                    <div class="form-group address row">
+                        <label class="col-sm-2 control-label">Адреса</label>
+                        <div class="col-sm-10">
+                            <input class="form-control" type="text" id="inputAddress" placeholder="Київ, вул. Спаська, 2">
+                            <span class="address-help-block"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div class="bs-callout bs-callout-warning order-info">
+                    <h4>Інформація про замовлення</h4>
+                    <p>
+                        <b>Приблизний час доставки: </b><span class="order-time">невідомий</span>
+                    </p>
+                    <p>
+                        <b>Адреса доставки: </b><span class="order-adress">невідома</span>
+                    </p>
+                </div>
+            </div>
+            <div class="form-group next-step-wrap">
+                <div class="next-step-width">
+                    <button type="button" name="submit" class="btn btn-warning btn-block next-step-button" disabled>
+                        Далі
+                        <i class="glyphicon glyphicon-chevron-right icon-white">
+                        </i>
+                    </button>
+                </div>
+            </div>
+            <div class="col-xs-12 google-map">
+                <div id="googleMap"></div>
+            </div>
+            <!-- місце для віджету -->
+            <div id="liqpay"></div>
+        </div>
+    </div>
+    <div class="right">
+        <div class="order row">
+            <span class="title">Замовлення<span class="badge ordered">0</span></span>
+        </div>
+        <div class="bucket-template row">
+        </div>
+        <div class="summary row">
+            <span class="amount"> Сума замовлення</span>
+            <span class="amount-number">0 грн</span>
+            <div class="button-order">
+                <a href="http://localhost:5050/" class="back-order-button">
+                    <button class="btn btn-default btn-back-order">Редагувати замовлення</button>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<% include common/footer.ejs %>

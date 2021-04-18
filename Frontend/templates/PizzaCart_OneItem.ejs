@@ -1,28 +1,26 @@
-<div class="order">
-    <h4><%=pizza.title%> (<%=size%>)</h4>
-    <img src="assets/images/size-icon.svg">
-    <span class="cart-num"><%=pizza[size].size%></span>
-    <img src="assets/images/weight.svg">
-    <span class="cart-num"><%=pizza[size].weight%></span>
-    <div class="row">
-        <span class="col-xs-3 cart-num price"><%=pizza[size].price%>грн</span>
-        <div class="col-xs-4">
-            <button type="button" class="btn btn-danger btn-xs btn-round count-btn minus">
-                <span class="glyphicon glyphicon-minus"></span>
+<div class="bucket-item">
+    <% if(pizza.big_size && size === 'big_size') { %>
+        <h4><%= pizza.title %> (Велика)</h4>
+    <% } else if(pizza.small_size && size === 'small_size'){%>
+        <h4><%= pizza.title %> (Мала)</h4>
+    <% } %>
+    <div class="size"><img src="assets/images/size-icon.svg"/> <%= pizza[size].size %> </div>
+    <div class="weight"><img src="assets/images/weight.svg"/> <%= pizza[size].weight %> </div>
+    <div>
+        <h4 class="price"><%= pizza[size].price %> грн</h4>
+        <div class="count">
+            <button class="btn btn-danger minus">
+                <i class="glyphicon glyphicon-minus"></i>
             </button>
-            <span class="order-amount cart-num"><%=quantity%></span>
-            <button type="button" class="btn btn-success btn-xs btn-round count-btn plus">
-                <span class="glyphicon glyphicon-plus"></span>
+            <span class="quantity"><%= quantity %></span>
+
+            <button class="btn btn-success plus">
+                <i class="glyphicon glyphicon-plus"></i>
             </button>
-        </div>
-        <div class="col-xs-1">
-            <button type="button" class="btn btn-default btn-xs btn-round del">
-                <span class="glyphicon glyphicon-remove" style="color: #eaa72e"></span>
+            <button class="btn btn-default remove">
+                <i class="glyphicon glyphicon-remove"></i>
             </button>
-        </div>
-        <div class="col-xs-4 pizza-img">
-            <img src="<%=pizza.icon%>">
         </div>
     </div>
-
+    <img class="half-pizza" src="<%= pizza.icon %>"/>
 </div>

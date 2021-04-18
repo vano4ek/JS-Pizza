@@ -1,0 +1,42 @@
+<% include common/header.ejs %>
+
+<div class="main container-fluid">
+    <div class="left">
+        <div class="title container-fluid">
+            <h2 class="center">Усі піци <span class="badge">8</span></h2>
+        </div>
+        <div class="select-pizza container-fluid">
+            <ul class="nav nav-pills">
+                <li class="active"><a href="#" id="all">Усі</a></li>
+                <li><a href="#" id="meat">М'ясні</a></li>
+                <li><a href="#" id="pineapple">З ананасами</a></li>
+                <li><a href="#" id="mushroom">З грибами</a></li>
+                <li><a href="#" id="ocean">З морепродуктами</a></li>
+                <li><a href="#" id="vega">Вега</a></li>
+            </ul>
+        </div>
+        <div class="">
+            <div class="row template-pizza">
+            </div>
+        </div>
+    </div>
+    <div class="right">
+        <div class="order row">
+            <span class="title">Замовлення<span class="badge ordered">0</span></span>
+            <span class="delete-order"><a href="#" class="delete-order">Очистити замовлення</a></span>
+        </div>
+        <div class="bucket-template row">
+        </div>
+        <div class="summary row">
+            <span class="amount"> Сума замовлення</span>
+            <span class="amount-number">0 грн</span>
+            <div class="button-order">
+                <a href="http://localhost:5050/order.html" class="back-order-button">
+                    <button class="btn btn-warning btn-lg btn-do-order">Замовити</button>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<% include common/footer.ejs %>
